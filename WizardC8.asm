@@ -18,7 +18,7 @@ Init:
 	.dw Description			;or .dw $0000 if you don't have a description
 	.db $07,$00			;always this string
 	.dw Icon			;or .dw $0000 if you don't have an icon
-	.dw ALE				;usually .dw $0000 if you don't have or know what an ALE is
+	.dw $0000				;usually .dw $0000 if you don't have or know what an ALE is
 Start:                          	;main routines
 	
 	
@@ -47,7 +47,3 @@ Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
 	.db %10101010,%10101001
 	.db %10000000,%00000001
 	.db %11111111,%11111111
-ALE:					;must be omitted if .dw ALE is .dw 0000 above
-	.db "ZALE",0,0,0,0 ;always eight bytes, use
-	.db "ZLALE",0,0,0 ;zeros for extra bytes
-	.db $FF ;put after last ALE
