@@ -25,7 +25,7 @@ Start:                          	;main routines
 	
 	
 	
-	    ret
+    ret
 	
 Description:
 	.db "A Harry Potter Currency Converter", 0
