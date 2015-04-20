@@ -1,7 +1,7 @@
 ; Program Name: WizardC8
 ; Author: Ephraim Becker
 ; Version: 8.0
-; Date: April 19th, 2015
+; Date: April 20th, 2015
 ; Written for Doors CS 7.0 and higher (http://dcs.cemetech.net)
 
 .nolist
