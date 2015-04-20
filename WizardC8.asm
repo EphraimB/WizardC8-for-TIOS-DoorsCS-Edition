@@ -29,6 +29,7 @@ Start:                          	;main routines
     ld hl, WizardC8WinButtons
     ld de, dat_end-WizardC8WinButtons
     ld a, GUIRWinButtons
+    call PushGUIStack
 
     ld hl, 0
     call GUIMouse
