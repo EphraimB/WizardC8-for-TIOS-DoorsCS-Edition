@@ -74,6 +74,11 @@ Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
 
 WizardC8WindowData:
     .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+
     .db "WizardC8 DoorsCS Edition", 0
 
 WizardC8WinButtons:
@@ -93,7 +98,13 @@ AboutButton:
 AboutWindowData:
     .db 15
     .db 15
+
     .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+    .db 0, 0, 0, 0, 0
+
     .dw About
 
 dat_end:
