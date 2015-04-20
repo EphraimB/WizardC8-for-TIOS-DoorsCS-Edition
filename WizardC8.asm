@@ -24,7 +24,7 @@ Start:                          	;main routines
     
     ld hl, WizardC8Window
     ld a, GUIRLargeWin
-    
+    call PushGUIStack
 	
 	
     ret
