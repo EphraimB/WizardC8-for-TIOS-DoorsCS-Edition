@@ -88,8 +88,8 @@ WizardC8WinButtons:
     .dw Exit
 
 AboutButton:
-    .db 1
-    .db 1
+    .db 45
+    .db 55
     
     .dw AboutWindow
 
