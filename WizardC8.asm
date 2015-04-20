@@ -73,11 +73,11 @@ Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
 	.db %11111111,%11111111
 
 WizardC8WindowData:
-    .db 0, 0, 0, 0, 0
-    .db 0, 0, 0, 0, 0
-    .db 0, 0, 0, 0, 0
-    .db 0, 0, 0, 0, 0
-    .db 0, 0, 0, 0, 0
+    .db 0, 0, 1, 0, 1
+    .db 0, 1, 0, 1, 1
+    .db 1, 0, 0, 0, 1
+    .db 1, 0, 0, 0, 1
+    .db 1, 1, 1, 1, 1
 
     .db "WizardC8 DoorsCS Edition", 0
 
