@@ -26,10 +26,18 @@ Start:                          	;main routines
     ld a, GUIRLargeWin
     call PushGUIStack
     
+    ld hl, WizardC8WinButtons
+    ld de, dat_end-WizardC8WinButtons
+    ld a, GUIRWinButtons
+
     ld hl, 0
     call GUIMouse
     ret
-	
+
+Exit:
+    call ResetAppPage
+    ret
+
 Description:
 	.db "A Harry Potter Currency Converter", 0
 Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
@@ -53,3 +61,9 @@ Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
 WizardC8Window:
     .db 0, 0, 0, 0, 0
     .db "WizardC8 DoorsCS Edition", 0
+
+WizardC8WinButtons:
+    .db %1, 0, 0, 00000
+    .dw Exit
+
+dat_end:
