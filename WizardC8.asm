@@ -22,6 +22,8 @@ Init:
 Start:                          	;main routines
     call OpenGUIStack
     
+    ld hl, WizardC8Window
+    call GUIRLargeWindow
 	
 	
 	
@@ -46,3 +48,7 @@ Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
 	.db %10101010,%10101001
 	.db %10000000,%00000001
 	.db %11111111,%11111111
+
+WizardC8Window:
+    .db 0, 0, 0, 0, 0
+    .db "WizardC8 DoorsCS Edition", 0
