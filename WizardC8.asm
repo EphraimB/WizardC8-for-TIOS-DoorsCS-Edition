@@ -63,7 +63,7 @@ WizardC8Window:
     .db "WizardC8 DoorsCS Edition", 0
 
 WizardC8WinButtons:
-    .db %1, 0, 0, 00000
+    .db %0, 0, 1, 00000
     .dw 0
     .dw 0
     .dw Exit
