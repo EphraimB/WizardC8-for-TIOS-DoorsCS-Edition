@@ -22,7 +22,7 @@ Init:
 Start:                          	;main routines
     call OpenGUIStack
     
-    ld hl, WizardC8Window
+    ld hl, WizardC8WindowData
     ld a, GUIRLargeWin
     call PushGUIStack
     
@@ -40,6 +40,13 @@ Start:                          	;main routines
     ld hl, 0
     call GUIMouse
     ret
+
+AboutWindow:
+    ld hl, AboutWindowData
+    ld de, AboutButton-AboutWindowData
+    ld a, GUIRSmallWin
+    call PushGUIStack
+
 
 Exit:
     call ResetAppPage
@@ -65,7 +72,7 @@ Icon:				;a 16x16 icon (can be omitted if .dw Icon is .dw 0000 above)
 	.db %10000000,%00000001
 	.db %11111111,%11111111
 
-WizardC8Window:
+WizardC8WindowData:
     .db 0, 0, 0, 0, 0
     .db "WizardC8 DoorsCS Edition", 0
 
@@ -82,5 +89,11 @@ AboutButton:
     .dw AboutWindow
 
     .db "About", 0
+
+AboutWindowData:
+    .db 15
+    .db 15
+    .db 0, 0, 0, 0, 0
+    .dw About
 
 dat_end:
