@@ -23,8 +23,8 @@ Start:                          	;main routines
     call OpenGUIStack
     
     ld hl, WizardC8Window
-    call GUIRLargeWin
-	
+    ld a, GUIRLargeWin
+    
 	
 	
     ret
