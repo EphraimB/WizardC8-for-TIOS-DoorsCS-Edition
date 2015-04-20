@@ -20,10 +20,10 @@ Init:
 	.dw Icon			;or .dw $0000 if you don't have an icon
 	.dw $0000				;usually .dw $0000 if you don't have or know what an ALE is
 Start:                          	;main routines
-    call OpenGUIStack
+    OpenGUIStack()
     
     ld hl, WizardC8Window
-    call GUIRLargeWindow
+    call GUIRLargeWin
 	
 	
 	
