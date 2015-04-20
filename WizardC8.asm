@@ -31,6 +31,12 @@ Start:                          	;main routines
     ld a, GUIRWinButtons
     call PushGUIStack
 
+    ld hl, AboutButton
+    ld de, WizardC8WinButtons-AboutButton
+    ld a, GUIRButtonText
+    call PushGUIStack
+
+
     ld hl, 0
     call GUIMouse
     ret
@@ -68,5 +74,13 @@ WizardC8WinButtons:
     .dw 0
     .dw 0
     .dw Exit
+
+AboutButton:
+    .db 1
+    .db 1
+    
+    .dw AboutWindow
+
+    .db "About", 0
 
 dat_end:
